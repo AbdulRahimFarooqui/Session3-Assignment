@@ -26,4 +26,4 @@ jobs:
         run: sudo apt-get update
 
       - name: Deploying on Surge
-        run: surge ./buildsession-3-assignment.surge.sh --token ${{secrets.SUrGE_KEY}}
+        run: surge ./buildsession-3-assignment.surge.sh --token ${{secrets.SURGE_KEY}}
