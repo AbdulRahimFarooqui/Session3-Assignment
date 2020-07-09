@@ -1,7 +1,7 @@
-name: Auto Deployment
+name: AutoDeploy
 on:
   push:
-    branches: [Master]
+    branches: [master]
 jobs:
   build:
     runs-on: ubuntu-latest
