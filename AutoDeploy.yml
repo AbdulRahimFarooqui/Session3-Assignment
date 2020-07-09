@@ -1,0 +1,25 @@
+name: Auto Deployment
+on:
+  push:
+    branches: [Master]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setting GitHub Actions
+        uses: actions/checkout@v2
+      - name: Installing Node.js
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: 12
+      - name: Installing Yarn Through a custom action by Borales
+        uses: Borales/actions-yarn@v2.3.0
+        with:
+          #Yarn command
+          cmd: Install
+      - name: Build the dependencies and compile our React app
+        run: yarn build
+      - name: Installing surge
+        run: npm install surge
+      - name: Deploying on Surge
+        run: surge ./buildsession-3-assignment.surge.sh --token ${{secrets.SUrGE_KEY}}
