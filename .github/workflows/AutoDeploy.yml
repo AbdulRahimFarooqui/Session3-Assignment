@@ -24,5 +24,6 @@ jobs:
         run: npm install surge
       - name: Correcting a dependency
         run: apt-get update
+
       - name: Deploying on Surge
         run: surge ./buildsession-3-assignment.surge.sh --token ${{secrets.SUrGE_KEY}}
