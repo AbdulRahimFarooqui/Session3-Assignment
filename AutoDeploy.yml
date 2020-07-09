@@ -21,5 +21,8 @@ jobs:
         run: yarn build
       - name: Installing surge
         run: npm install surge
+      - name: Correcting a dependency
+        uses: websocket-extensions@^0.1.4:
+              version "0.1.4"
       - name: Deploying on Surge
         run: surge ./buildsession-3-assignment.surge.sh --token ${{secrets.SUrGE_KEY}}
