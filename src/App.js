@@ -1,24 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import MediaCard from './MediaCard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div><MediaCard title = {<h1>The Title</h1>} body = {<b>This is the body text</b>} imageURL = 'https://daveceddia.com/images/social-card.png'/>
     </div>
   );
 }
